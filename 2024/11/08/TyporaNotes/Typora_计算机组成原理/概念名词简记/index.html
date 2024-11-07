@@ -1,0 +1,370 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>小马Ti的博客 | 小马Ti的博客</title><meta name="author" content="小马Ti"><meta name="copyright" content="小马Ti"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="存储器1.MAR（Memory Address Register）内存地址寄存器，是计算机处理器中的一个寄存器，用于存储要访问的内存单元的地址。 2.MDR（Memory Data Register）内存数据寄存器，也是计算机处理器中的一个寄存器，用于暂存从内存读取的数据或即将写入内存的数据。 3.Cache（缓存）：Cache，即缓存，是一种存储技术，用于暂时存储经常访问的数据或指令，以便快速访">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小马Ti的博客">
+<meta property="og:url" content="http://example.com/2024/11/08/TyporaNotes/Typora_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%A6%82%E5%BF%B5%E5%90%8D%E8%AF%8D%E7%AE%80%E8%AE%B0/index.html">
+<meta property="og:site_name" content="小马Ti的博客">
+<meta property="og:description" content="存储器1.MAR（Memory Address Register）内存地址寄存器，是计算机处理器中的一个寄存器，用于存储要访问的内存单元的地址。 2.MDR（Memory Data Register）内存数据寄存器，也是计算机处理器中的一个寄存器，用于暂存从内存读取的数据或即将写入内存的数据。 3.Cache（缓存）：Cache，即缓存，是一种存储技术，用于暂时存储经常访问的数据或指令，以便快速访">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/%E9%AD%94%E6%96%B9.jpg">
+<meta property="article:published_time" content="2024-11-07T16:04:28.062Z">
+<meta property="article:modified_time" content="2024-11-07T16:24:04.288Z">
+<meta property="article:author" content="小马Ti">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/%E9%AD%94%E6%96%B9.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2024/11/08/TyporaNotes/Typora_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%A6%82%E5%BF%B5%E5%90%8D%E8%AF%8D%E7%AE%80%E8%AE%B0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+          
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 8 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-center"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '小马Ti的博客',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><script async src="https://npm.elemecdn.com/tzy-blog/lib/js/other/sakura.js"></script><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"><link rel="stylesheet" href="/css/readPercent.css"><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background-image: url(https://s2.loli.net/2024/11/07/BI1ZP7wjgN3hzMv.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/%E9%AD%94%E6%96%B9.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">522</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 档案</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">小马Ti的博客</span></a><a class="nav-page-title" href="/"><span class="site-name">小马Ti的博客</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 档案</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">无标题<a class="post-edit-link" href="null_posts/TyporaNotes/Typora_计算机组成原理/概念名词简记.md" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-11-07T16:04:28.062Z" title="发表于 2024-11-08 00:04:28">2024-11-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-11-07T16:24:04.288Z" title="更新于 2024-11-08 00:24:04">2024-11-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">2.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:365,&quot;messagePrev&quot;:&quot;It has been&quot;,&quot;messageNext&quot;:&quot;days since the last update, the content of the article may be outdated.&quot;,&quot;postUpdate&quot;:&quot;2024-11-08 00:24:04&quot;}" hidden></div><h2 id="存储器"><a href="#存储器" class="headerlink" title="存储器"></a>存储器</h2><h3 id="1-MAR（Memory-Address-Register）"><a href="#1-MAR（Memory-Address-Register）" class="headerlink" title="1.MAR（Memory Address Register）"></a>1.MAR（Memory Address Register）</h3><p>内存地址寄存器，是计算机处理器中的一个寄存器，用于存储要访问的内存单元的地址。</p>
+<h3 id="2-MDR（Memory-Data-Register）"><a href="#2-MDR（Memory-Data-Register）" class="headerlink" title="2.MDR（Memory Data Register）"></a>2.MDR（Memory Data Register）</h3><p>内存数据寄存器，也是计算机处理器中的一个寄存器，用于暂存从内存读取的数据或即将写入内存的数据。</p>
+<h3 id="3-Cache（缓存）："><a href="#3-Cache（缓存）：" class="headerlink" title="3.Cache（缓存）："></a>3.Cache（缓存）：</h3><p>Cache，即缓存，是一种存储技术，用于暂时存储经常访问的数据或指令，以便快速访问。它是位于CPU和主内存之间的一种小容量但非常快速的存储器。</p>
+<h3 id="4-SAM（Sequential-Access-Memory）："><a href="#4-SAM（Sequential-Access-Memory）：" class="headerlink" title="4.SAM（Sequential Access Memory）："></a>4.SAM（Sequential Access Memory）：</h3><p>顺序存取存储器，这种存储器按一定顺序访问数据，存取数据的时间依赖于数据的位置。常见的例子是磁带存储。</p>
+<h3 id="5-RAM（Random-Access-Memory）："><a href="#5-RAM（Random-Access-Memory）：" class="headerlink" title="5.RAM（Random Access Memory）："></a>5.RAM（Random Access Memory）：</h3><p>随机存取存储器，这种存储器可以在任何顺序存取数据，存取数据的时间与数据的位置无关。常见的例子是计算机内存。</p>
+<h3 id="6-DRAM（Dynamic-Random-Access-Memory）：动态随机存取存储器，这种存储器使用电容器存储数据，每个存储单元由一个电容和一个晶体管组成，电容需要定期刷新以保持数据。"><a href="#6-DRAM（Dynamic-Random-Access-Memory）：动态随机存取存储器，这种存储器使用电容器存储数据，每个存储单元由一个电容和一个晶体管组成，电容需要定期刷新以保持数据。" class="headerlink" title="6.DRAM（Dynamic Random Access Memory）：动态随机存取存储器，这种存储器使用电容器存储数据，每个存储单元由一个电容和一个晶体管组成，电容需要定期刷新以保持数据。"></a>6.DRAM（Dynamic Random Access Memory）：动态随机存取存储器，这种存储器使用电容器存储数据，每个存储单元由一个电容和一个晶体管组成，电容需要定期刷新以保持数据。</h3><h3 id="7-SRAM（Static-Random-Access-Memory）：静态随机存取存储器，这种存储器使用触发器存储数据，每个存储单元由多个晶体管组成，数据在电源开通时可以一直保持，不需要刷新。"><a href="#7-SRAM（Static-Random-Access-Memory）：静态随机存取存储器，这种存储器使用触发器存储数据，每个存储单元由多个晶体管组成，数据在电源开通时可以一直保持，不需要刷新。" class="headerlink" title="7.SRAM（Static Random Access Memory）：静态随机存取存储器，这种存储器使用触发器存储数据，每个存储单元由多个晶体管组成，数据在电源开通时可以一直保持，不需要刷新。"></a>7.SRAM（Static Random Access Memory）：静态随机存取存储器，这种存储器使用触发器存储数据，每个存储单元由多个晶体管组成，数据在电源开通时可以一直保持，不需要刷新。</h3><h3 id="8-SDRAM（Synchronous-Dynamic-Random-Access-Memory）"><a href="#8-SDRAM（Synchronous-Dynamic-Random-Access-Memory）" class="headerlink" title="8.SDRAM（Synchronous Dynamic Random Access Memory）"></a>8.SDRAM（Synchronous Dynamic Random Access Memory）</h3><p>同步动态随机存取存储器，是一种与系统时钟同步运行的DRAM类型。它在时钟的每个周期都能执行指令，从而提高了数据访问速度和效率。</p>
+<h3 id="9-MROM（Masked-Read-Only-Memory）："><a href="#9-MROM（Masked-Read-Only-Memory）：" class="headerlink" title="9.MROM（Masked Read-Only Memory）："></a>9.MROM（Masked Read-Only Memory）：</h3><p>掩膜只读存储器，MROM是一种只读存储器，其内容在制造过程中被永久性地设置，不可更改。</p>
+<h3 id="10-PROM（Programmable-Read-Only-Memory）："><a href="#10-PROM（Programmable-Read-Only-Memory）：" class="headerlink" title="10.PROM（Programmable Read-Only Memory）："></a>10.PROM（Programmable Read-Only Memory）：</h3><p>可编程只读存储器，PROM是一种只读存储器，用户可以编程一次，之后内容固定，不可更改。</p>
+<h3 id="11-EPROM（Erasable-Programmable-Read-Only-Memory）："><a href="#11-EPROM（Erasable-Programmable-Read-Only-Memory）：" class="headerlink" title="11.EPROM（Erasable Programmable Read-Only Memory）："></a>11.EPROM（Erasable Programmable Read-Only Memory）：</h3><p>可擦写可编程只读存储器，EPROM是一种可编程和可擦写的只读存储器，用户可以通过暴露于紫外线下来擦除和重新编程。</p>
+<h3 id="12-Flash-Memory（Flash-Memory）："><a href="#12-Flash-Memory（Flash-Memory）：" class="headerlink" title="12.Flash Memory（Flash Memory）："></a>12.Flash Memory（Flash Memory）：</h3><p>闪存，Flash Memory是一种非易失性存储器，可以电子方式擦除和重写。</p>
+<h3 id="13-SSD（Solid-State-Drive）："><a href="#13-SSD（Solid-State-Drive）：" class="headerlink" title="13.SSD（Solid State Drive）："></a>13.SSD（Solid State Drive）：</h3><p>固态硬盘，SSD是一种使用闪存作为存储介质的计算机硬盘，用于数据存储。</p>
+<h3 id="14-MREQ（Memory-Request）"><a href="#14-MREQ（Memory-Request）" class="headerlink" title="14.MREQ（Memory Request）"></a>14.MREQ（Memory Request）</h3><p>内存请求信号，是微处理器与内存或内存控制器之间的控制信号，用于指示当前总线周期是内存访问周期。通常在处理器访问内存时有效。</p>
+<h3 id="15-RAID（Redundant-Array-of-Independent-Disks）"><a href="#15-RAID（Redundant-Array-of-Independent-Disks）" class="headerlink" title="15.RAID（Redundant Array of Independent Disks）"></a>15.RAID（Redundant Array of Independent Disks）</h3><p>独立磁盘冗余阵列，是一种将多个独立的物理磁盘驱动器组合成一个或多个逻辑单元，以提高数据存储性能和&#x2F;或提供容错能力的技术。</p>
+<h3 id="16-CAM（Content-Addressable-Memory-内容寻址存储器）"><a href="#16-CAM（Content-Addressable-Memory-内容寻址存储器）" class="headerlink" title="16.CAM（Content-Addressable Memory,内容寻址存储器）"></a>16.CAM（Content-Addressable Memory,内容寻址存储器）</h3><p>是一种特殊类型的计算机内存，它允许数据通过其内容而不是传统的内存地址来检索。</p>
+<h2 id="运算器"><a href="#运算器" class="headerlink" title="运算器"></a>运算器</h2><h3 id="1-ACC（Accumulator）"><a href="#1-ACC（Accumulator）" class="headerlink" title="1.ACC（Accumulator）"></a>1.ACC（Accumulator）</h3><p>累加器，是计算机处理器中的一个寄存器，用于存储算术和逻辑操作的结果。</p>
+<h3 id="2-MQ（Multiplier-Quotient-Register）"><a href="#2-MQ（Multiplier-Quotient-Register）" class="headerlink" title="2.MQ（Multiplier Quotient Register）"></a>2.MQ（Multiplier Quotient Register）</h3><p>乘数商寄存器，用于在乘法和除法操作中存储中间结果。</p>
+<h3 id="3-X"><a href="#3-X" class="headerlink" title="3.X"></a>3.X</h3><p>通常指代一个通用寄存器，用于存储临时数据或操作数。</p>
+<h3 id="4-ALU（Arithmetic-Logic-Unit）"><a href="#4-ALU（Arithmetic-Logic-Unit）" class="headerlink" title="4.ALU（Arithmetic Logic Unit）"></a>4.ALU（Arithmetic Logic Unit）</h3><p>算术逻辑单元，是处理器的一部分，负责执行算术和逻辑运算。</p>
+<h3 id="5-PSW（Program-Status-Word）"><a href="#5-PSW（Program-Status-Word）" class="headerlink" title="5.PSW（Program Status Word）"></a>5.PSW（Program Status Word）</h3><p>程序状态字,是一个寄存器，用于存储程序或处理器的当前状态信息，包括条件码、中断使能标志等。</p>
+<h2 id="控制器"><a href="#控制器" class="headerlink" title="控制器"></a>控制器</h2><h3 id="1-CU（Control-Unit）"><a href="#1-CU（Control-Unit）" class="headerlink" title="1.CU（Control Unit）"></a>1.CU（Control Unit）</h3><p>控制单元，是计算机处理器的一部分，负责解释和执行指令，控制其他组件的操作。</p>
+<h3 id="2-IR（Instruction-Register）"><a href="#2-IR（Instruction-Register）" class="headerlink" title="2.IR（Instruction Register）"></a>2.IR（Instruction Register）</h3><p>指令寄存器，用于存储当前正在执行的指令。</p>
+<h3 id="3-PC（Program-Counter）"><a href="#3-PC（Program-Counter）" class="headerlink" title="3.PC（Program Counter）"></a>3.PC（Program Counter）</h3><p>程序计数器，用于存储下一条将要执行的指令的地址。</p>
+<h3 id="4-BR（Base-Register）："><a href="#4-BR（Base-Register）：" class="headerlink" title="4.BR（Base Register）："></a>4.BR（Base Register）：</h3><p>基址寄存器,用于提供相对寻址的基地址的寄存器。</p>
+<h3 id="5-IX（Index-Register）："><a href="#5-IX（Index-Register）：" class="headerlink" title="5.IX（Index Register）："></a>5.IX（Index Register）：</h3><p>索引寄存器,用于存储索引值或偏移量的寄存器，常用于数组访问和指针操作。</p>
+<h3 id="6-EA（Effective-Address）："><a href="#6-EA（Effective-Address）：" class="headerlink" title="6.EA（Effective Address）："></a>6.EA（Effective Address）：</h3><p>有效地址,用于计算内存操作实际位置的地址，由寄存器值、立即数、偏移量等组合而成。</p>
+<h3 id="7-POP："><a href="#7-POP：" class="headerlink" title="7.POP："></a>7.POP：</h3><p>弹出,POP指令用于从堆栈中取出一个值并将其存储到指定的寄存器或内存位置。它通常用于恢复被压入堆栈的寄存器值，如在函数调用后恢复返回地址和参数。</p>
+<h3 id="8-PUSH："><a href="#8-PUSH：" class="headerlink" title="8.PUSH："></a>8.PUSH：</h3><p>压入,PUSH指令用于将一个值压入堆栈。它可以将寄存器中的值、立即数或内存中的值压入堆栈。PUSH常用于保存寄存器的值，以便在函数调用时使用，或者在需要时存储数据。</p>
+<h3 id="9-SP（Stack-Pointer）："><a href="#9-SP（Stack-Pointer）：" class="headerlink" title="9.SP（Stack Pointer）："></a>9.SP（Stack Pointer）：</h3><p>堆栈指针,堆栈指针是一个寄存器，用于指示当前堆栈的顶部位置。它用于管理堆栈中的数据，确保新压入的数据添加到顶部，而弹出的数据从顶部移除。堆栈指针在函数调用、返回、参数传递和局部变量存储等操作中起着关键作用。</p>
+<h3 id="10-IP（Instruction-Pointer）："><a href="#10-IP（Instruction-Pointer）：" class="headerlink" title="10.IP（Instruction Pointer）："></a>10.IP（Instruction Pointer）：</h3><p>指令指针,指令指针是一个寄存器，用于存储下一条指令的内存地址。它控制程序的执行流程，确保处理器能够按顺序执行指令序列。指令指针在程序的跳转、循环和函数调用等控制流操作中扮演重要角色。</p>
+<h3 id="11-CISC（Complex-Instruction-Set-Computer）："><a href="#11-CISC（Complex-Instruction-Set-Computer）：" class="headerlink" title="11.CISC（Complex Instruction Set Computer）："></a>11.CISC（Complex Instruction Set Computer）：</h3><p>复杂指令集计算机,CISC架构的处理器使用大量复杂的指令来执行各种操作。这些指令通常可以执行多个低级操作，如加载、存储、算术和逻辑运算。CISC架构的优点是每条指令可以完成更多的工作，但缺点是指令长度和执行时间可能较长。</p>
+<h3 id="12-RISC（Reduced-Instruction-Set-Computer）："><a href="#12-RISC（Reduced-Instruction-Set-Computer）：" class="headerlink" title="12.RISC（Reduced Instruction Set Computer）："></a>12.RISC（Reduced Instruction Set Computer）：</h3><p>精简指令集计算机,RISC架构的处理器使用较少的、简单的指令来执行操作。这些指令通常执行单个操作，如算术运算或数据传输。RISC架构的优点是每条指令的执行时间较短，指令周期更少，但缺点是可能需要更多的指令来完成复杂的任务。</p>
+<h3 id="13-FE（Fetch，取指）"><a href="#13-FE（Fetch，取指）" class="headerlink" title="13.FE（Fetch，取指）"></a>13.FE（Fetch，取指）</h3><p>取指阶段是控制器从内存中获取下一条指令的过程。</p>
+<h3 id="14-IND（Instruction-Decode，指令解码）："><a href="#14-IND（Instruction-Decode，指令解码）：" class="headerlink" title="14.IND（Instruction Decode，指令解码）："></a>14.IND（Instruction Decode，指令解码）：</h3><p>指令解码阶段是控制器解析刚刚获取的指令，确定指令的操作类型和操作数。</p>
+<h3 id="15-EX（Execute，执行）："><a href="#15-EX（Execute，执行）：" class="headerlink" title="15.EX（Execute，执行）："></a>15.EX（Execute，执行）：</h3><p>执行阶段是控制器根据解码阶段确定的指令操作类型和操作数进行实际计算或处理的过程。</p>
+<h3 id="16-INT（Interrupt，中断）："><a href="#16-INT（Interrupt，中断）：" class="headerlink" title="16.INT（Interrupt，中断）："></a>16.INT（Interrupt，中断）：</h3><p>中断是一种机制，用于暂停当前正在执行的程序，以便处理更紧急的任务或事件。</p>
+<h3 id="17-ID-Instruction-Decoder"><a href="#17-ID-Instruction-Decoder" class="headerlink" title="17.ID(Instruction Decoder):"></a>17.ID(<strong>Instruction Decoder</strong>):</h3><p>指令译码器,是计算机处理器中的一个关键组件，它负责将指令的操作码部分翻译成一系列的控制信号，这些信号用于指导处理器执行指令。</p>
+<h3 id="18-LDA-Load-Accumulator-："><a href="#18-LDA-Load-Accumulator-：" class="headerlink" title="18.LDA(Load Accumulator)："></a>18.LDA(Load Accumulator)：</h3><p>LDA指令是一种数据传输指令，用于将指定内存地址中的数据复制到累加器寄存器中。</p>
+<h3 id="19-CM（Control-Memory，控制存储器）："><a href="#19-CM（Control-Memory，控制存储器）：" class="headerlink" title="19.CM（Control Memory，控制存储器）："></a>19.CM（Control Memory，控制存储器）：</h3><p>控制存储器是计算机处理器中的一个组成部分，它用于存储微程序或微指令序列，这些微程序或微指令序列用于控制处理器的操作。</p>
+<h3 id="20-CMAR（Control-Memory-Address-Register，控制存储器地址寄存器）："><a href="#20-CMAR（Control-Memory-Address-Register，控制存储器地址寄存器）：" class="headerlink" title="20.CMAR（Control Memory Address Register，控制存储器地址寄存器）："></a>20.CMAR（Control Memory Address Register，控制存储器地址寄存器）：</h3><p>CMAR是计算机处理器中的一个寄存器，它用于存储控制存储器中微指令的地址。</p>
+<h3 id="21-CMDR（Control-Memory-Data-Register，控制存储器数据寄存器）："><a href="#21-CMDR（Control-Memory-Data-Register，控制存储器数据寄存器）：" class="headerlink" title="21.CMDR（Control Memory Data Register，控制存储器数据寄存器）："></a>21.CMDR（Control Memory Data Register，控制存储器数据寄存器）：</h3><p>CMDR是计算机处理器中的一个寄存器，它用于暂存从控制存储器中读取的微指令数据。</p>
+<h2 id="CPU性能指标"><a href="#CPU性能指标" class="headerlink" title="CPU性能指标"></a>CPU性能指标</h2><h3 id="1-CPI（Cycles-Per-Instruction）"><a href="#1-CPI（Cycles-Per-Instruction）" class="headerlink" title="1.CPI（Cycles Per Instruction）"></a>1.CPI（Cycles Per Instruction）</h3><p>是指每条指令所需的时钟周期数。它是衡量计算机处理器性能的一个指标，反映了执行一条指令所需的平均时钟周期数。</p>
+<h3 id="2-IPS（Instructions-Per-Second）"><a href="#2-IPS（Instructions-Per-Second）" class="headerlink" title="2.IPS（Instructions Per Second）"></a>2.IPS（Instructions Per Second）</h3><p>是指每秒钟处理器可以执行的指令数，是衡量计算机处理器性能的一个指标。</p>
+<h3 id="3-FLOPS（Floating-Point-Operations-Per-Second）"><a href="#3-FLOPS（Floating-Point-Operations-Per-Second）" class="headerlink" title="3.FLOPS（Floating Point Operations Per Second）"></a>3.FLOPS（Floating Point Operations Per Second）</h3><p>是指每秒钟处理器可以执行的浮点运算次数，是衡量计算机处理器在浮点运算方面性能的一个指标。</p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><h3 id="1-CLA（Clear-Accumulator）："><a href="#1-CLA（Clear-Accumulator）：" class="headerlink" title="1.CLA（Clear Accumulator）："></a>1.CLA（Clear Accumulator）：</h3><p>CLA指令用于将累加器寄存器的值清零。</p>
+<h3 id="2-COM（Complement）："><a href="#2-COM（Complement）：" class="headerlink" title="2.COM（Complement）："></a>2.COM（Complement）：</h3><p>COM指令用于对累加器或指定寄存器的值进行逐位取反，即每一位由1变为0，由0变为1。</p>
+<h3 id="3-SHR（Shift-Right）："><a href="#3-SHR（Shift-Right）：" class="headerlink" title="3.SHR（Shift Right）："></a>3.SHR（Shift Right）：</h3><p>SHR指令用于将累加器或指定寄存器的值逻辑右移一位，通常将最高位（MSB）移入进位标志位。</p>
+<h3 id="4-CSL（Circular-Shift-Left）："><a href="#4-CSL（Circular-Shift-Left）：" class="headerlink" title="4.CSL（Circular Shift Left）："></a>4.CSL（Circular Shift Left）：</h3><p>CSL指令用于将累加器或指定寄存器的值循环左移一位，最低位（LSB）移入最高位（MSB）。</p>
+<h3 id="5-STP（Stop）："><a href="#5-STP（Stop）：" class="headerlink" title="5.STP（Stop）："></a>5.STP（Stop）：</h3><p>STP指令用于停止处理器或程序的执行，通常用于程序结束或错误处理</p>
+<h2 id="多处理器"><a href="#多处理器" class="headerlink" title="多处理器"></a>多处理器</h2><p>1.SISD（Single Instruction, Single Data）：</p>
+<p>单指令单数据，这是一种传统的处理模型，其中单个处理器执行一条指令，操作单个数据项。</p>
+<p>2.SIMD（Single Instruction, Multiple Data）：</p>
+<p>单指令多数据，这种模型中，一个指令同时应用于多个数据项。这种模型常见于并行处理和向量处理中。</p>
+<p>3.MISD（Multiple Instruction, Single Data）：</p>
+<p>多指令单数据，这种模型相对较少见，其中多个处理器执行不同的指令，但都操作相同的数据。</p>
+<p>4.MIMD（Multiple Instruction, Multiple Data）</p>
+<p>是一种并行计算模型，其中多个处理器同时执行不同的指令集，操作不同的数据集。</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="1-FA（Full-Adder）"><a href="#1-FA（Full-Adder）" class="headerlink" title="1.FA（Full Adder）"></a>1.FA（Full Adder）</h3><p>全加器是数字电路中的一个基本组件，用于执行二进制数的加法运算。它能够将两个一位的二进制数（称为加数）以及一个进位输入相加，产生一个和以及一个进位输出。</p>
+<h3 id="2-多路复用器（MUX，Multiplexer）"><a href="#2-多路复用器（MUX，Multiplexer）" class="headerlink" title="2.多路复用器（MUX，Multiplexer）"></a>2.多路复用器（MUX，Multiplexer）</h3><p>是一种组合逻辑电路，它允许在多个输入信号中选择一个并将其传输到单个输出线上。</p>
+<h3 id="3-OF（Overflow-Flag）"><a href="#3-OF（Overflow-Flag）" class="headerlink" title="3.OF（Overflow Flag）"></a>3.OF（Overflow Flag）</h3><p>溢出标志位用于指示有符号数的算术操作是否产生了溢出。</p>
+<h3 id="4-SF（Sign-Flag）"><a href="#4-SF（Sign-Flag）" class="headerlink" title="4.SF（Sign Flag）"></a>4.SF（Sign Flag）</h3><p>定义：符号标志位用于指示运算结果的符号。</p>
+<h3 id="5-ZF（Zero-Flag）："><a href="#5-ZF（Zero-Flag）：" class="headerlink" title="5.ZF（Zero Flag）："></a>5.ZF（Zero Flag）：</h3><p>定义：零标志位用于指示运算结果是否为零。</p>
+<h3 id="6-CF（Carry-Flag）："><a href="#6-CF（Carry-Flag）：" class="headerlink" title="6.CF（Carry Flag）："></a>6.CF（Carry Flag）：</h3><p>定义：进位标志位用于指示无符号数的算术操作是否产生了进位或借位。</p>
+<h3 id="7-MSB（Most-Significant-Bit）"><a href="#7-MSB（Most-Significant-Bit）" class="headerlink" title="7.MSB（Most Significant Bit）"></a>7.MSB（Most Significant Bit）</h3><p>在一个二进制数中，MSB是最高位，即最左边的位，它具有最高的值。在大多数情况下，MSB决定了数字的符号（例如，在补码表示中）。</p>
+<h3 id="8-LSB（Least-Significant-Bit）"><a href="#8-LSB（Least-Significant-Bit）" class="headerlink" title="8.LSB（Least Significant Bit）"></a>8.LSB（Least Significant Bit）</h3><p>LSB是最低位，即最右边的位，它具有最小的值。LSB通常用于确定数字的奇偶性。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">小马Ti</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2024/11/08/TyporaNotes/Typora_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%A6%82%E5%BF%B5%E5%90%8D%E8%AF%8D%E7%AE%80%E8%AE%B0/">http://example.com/2024/11/08/TyporaNotes/Typora_计算机组成原理/概念名词简记/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">小马Ti的博客</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/%E9%AD%94%E6%96%B9.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg"/></a><div class="post-qr-code-desc"></div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2024/11/08/TyporaNotes/Typora_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%A0%87%E5%BF%97%E4%BD%8D%E7%9A%84%E7%94%9F%E6%88%90/" title=""><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2"></div></div><div class="info-2"><div class="info-item-1">标志位的生成分类1.OF 2.SF 3.ZF 4.CF  结构形式 使用方法1.OF(有符号的看这一位) 2.SF 3.ZF 4.CF(无符号的看这一位) </div></div></div></a><a class="pagination-related" href="/2024/11/08/TyporaNotes/Typora_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA/" title=""><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2"></div></div><div class="info-2"><div class="info-item-1">浮点数的表示定义浮点数（Floating Point Number）是一种表示实数的方法，它能够表示非常大或非常小的数字，以及不是整数的数字。 组成部分1.符号位 2.指数部分 3.尾数部分组成 符号位表示正负，指数部分表示数的范围，尾数部分表示数的精度。 结构形式浮点数的表示通常遵循IEEE 754标准，该标准定义了单精度（32位）和双精度（64位）两种主要的浮点数格式。 阶码：常用补码或者原码表示的定点整数 尾数：常用原码或者补码表示的定点小数  分类浮点数可以根据其表示的精度和范围进行分类，如单精度浮点数和双精度浮点数。 特征浮点数的主要特征是能够表示非常大或非常小的数，以及非整数，但可能存在精度误差。 目的浮点数的目的在于提供一种在计算机中表示实数的方法，特别是在需要处理非常大或非常小的数以及非整数时。 相关知识点1.尾数的规格化使用方法 特点 2.正负上溢、正负下溢 </div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">存储器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-MAR%EF%BC%88Memory-Address-Register%EF%BC%89"><span class="toc-number">1.1.</span> <span class="toc-text">1.MAR（Memory Address Register）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-MDR%EF%BC%88Memory-Data-Register%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">2.MDR（Memory Data Register）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Cache%EF%BC%88%E7%BC%93%E5%AD%98%EF%BC%89%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">3.Cache（缓存）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-SAM%EF%BC%88Sequential-Access-Memory%EF%BC%89%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">4.SAM（Sequential Access Memory）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-RAM%EF%BC%88Random-Access-Memory%EF%BC%89%EF%BC%9A"><span class="toc-number">1.5.</span> <span class="toc-text">5.RAM（Random Access Memory）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-DRAM%EF%BC%88Dynamic-Random-Access-Memory%EF%BC%89%EF%BC%9A%E5%8A%A8%E6%80%81%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%8F%96%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%8C%E8%BF%99%E7%A7%8D%E5%AD%98%E5%82%A8%E5%99%A8%E4%BD%BF%E7%94%A8%E7%94%B5%E5%AE%B9%E5%99%A8%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE%EF%BC%8C%E6%AF%8F%E4%B8%AA%E5%AD%98%E5%82%A8%E5%8D%95%E5%85%83%E7%94%B1%E4%B8%80%E4%B8%AA%E7%94%B5%E5%AE%B9%E5%92%8C%E4%B8%80%E4%B8%AA%E6%99%B6%E4%BD%93%E7%AE%A1%E7%BB%84%E6%88%90%EF%BC%8C%E7%94%B5%E5%AE%B9%E9%9C%80%E8%A6%81%E5%AE%9A%E6%9C%9F%E5%88%B7%E6%96%B0%E4%BB%A5%E4%BF%9D%E6%8C%81%E6%95%B0%E6%8D%AE%E3%80%82"><span class="toc-number">1.6.</span> <span class="toc-text">6.DRAM（Dynamic Random Access Memory）：动态随机存取存储器，这种存储器使用电容器存储数据，每个存储单元由一个电容和一个晶体管组成，电容需要定期刷新以保持数据。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-SRAM%EF%BC%88Static-Random-Access-Memory%EF%BC%89%EF%BC%9A%E9%9D%99%E6%80%81%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%8F%96%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%8C%E8%BF%99%E7%A7%8D%E5%AD%98%E5%82%A8%E5%99%A8%E4%BD%BF%E7%94%A8%E8%A7%A6%E5%8F%91%E5%99%A8%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE%EF%BC%8C%E6%AF%8F%E4%B8%AA%E5%AD%98%E5%82%A8%E5%8D%95%E5%85%83%E7%94%B1%E5%A4%9A%E4%B8%AA%E6%99%B6%E4%BD%93%E7%AE%A1%E7%BB%84%E6%88%90%EF%BC%8C%E6%95%B0%E6%8D%AE%E5%9C%A8%E7%94%B5%E6%BA%90%E5%BC%80%E9%80%9A%E6%97%B6%E5%8F%AF%E4%BB%A5%E4%B8%80%E7%9B%B4%E4%BF%9D%E6%8C%81%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E5%88%B7%E6%96%B0%E3%80%82"><span class="toc-number">1.7.</span> <span class="toc-text">7.SRAM（Static Random Access Memory）：静态随机存取存储器，这种存储器使用触发器存储数据，每个存储单元由多个晶体管组成，数据在电源开通时可以一直保持，不需要刷新。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-SDRAM%EF%BC%88Synchronous-Dynamic-Random-Access-Memory%EF%BC%89"><span class="toc-number">1.8.</span> <span class="toc-text">8.SDRAM（Synchronous Dynamic Random Access Memory）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-MROM%EF%BC%88Masked-Read-Only-Memory%EF%BC%89%EF%BC%9A"><span class="toc-number">1.9.</span> <span class="toc-text">9.MROM（Masked Read-Only Memory）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-PROM%EF%BC%88Programmable-Read-Only-Memory%EF%BC%89%EF%BC%9A"><span class="toc-number">1.10.</span> <span class="toc-text">10.PROM（Programmable Read-Only Memory）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-EPROM%EF%BC%88Erasable-Programmable-Read-Only-Memory%EF%BC%89%EF%BC%9A"><span class="toc-number">1.11.</span> <span class="toc-text">11.EPROM（Erasable Programmable Read-Only Memory）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-Flash-Memory%EF%BC%88Flash-Memory%EF%BC%89%EF%BC%9A"><span class="toc-number">1.12.</span> <span class="toc-text">12.Flash Memory（Flash Memory）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-SSD%EF%BC%88Solid-State-Drive%EF%BC%89%EF%BC%9A"><span class="toc-number">1.13.</span> <span class="toc-text">13.SSD（Solid State Drive）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-MREQ%EF%BC%88Memory-Request%EF%BC%89"><span class="toc-number">1.14.</span> <span class="toc-text">14.MREQ（Memory Request）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-RAID%EF%BC%88Redundant-Array-of-Independent-Disks%EF%BC%89"><span class="toc-number">1.15.</span> <span class="toc-text">15.RAID（Redundant Array of Independent Disks）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-CAM%EF%BC%88Content-Addressable-Memory-%E5%86%85%E5%AE%B9%E5%AF%BB%E5%9D%80%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%89"><span class="toc-number">1.16.</span> <span class="toc-text">16.CAM（Content-Addressable Memory,内容寻址存储器）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text">运算器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-ACC%EF%BC%88Accumulator%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">1.ACC（Accumulator）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-MQ%EF%BC%88Multiplier-Quotient-Register%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">2.MQ（Multiplier Quotient Register）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-X"><span class="toc-number">2.3.</span> <span class="toc-text">3.X</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-ALU%EF%BC%88Arithmetic-Logic-Unit%EF%BC%89"><span class="toc-number">2.4.</span> <span class="toc-text">4.ALU（Arithmetic Logic Unit）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-PSW%EF%BC%88Program-Status-Word%EF%BC%89"><span class="toc-number">2.5.</span> <span class="toc-text">5.PSW（Program Status Word）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="toc-number">3.</span> <span class="toc-text">控制器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-CU%EF%BC%88Control-Unit%EF%BC%89"><span class="toc-number">3.1.</span> <span class="toc-text">1.CU（Control Unit）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-IR%EF%BC%88Instruction-Register%EF%BC%89"><span class="toc-number">3.2.</span> <span class="toc-text">2.IR（Instruction Register）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-PC%EF%BC%88Program-Counter%EF%BC%89"><span class="toc-number">3.3.</span> <span class="toc-text">3.PC（Program Counter）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-BR%EF%BC%88Base-Register%EF%BC%89%EF%BC%9A"><span class="toc-number">3.4.</span> <span class="toc-text">4.BR（Base Register）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-IX%EF%BC%88Index-Register%EF%BC%89%EF%BC%9A"><span class="toc-number">3.5.</span> <span class="toc-text">5.IX（Index Register）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-EA%EF%BC%88Effective-Address%EF%BC%89%EF%BC%9A"><span class="toc-number">3.6.</span> <span class="toc-text">6.EA（Effective Address）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-POP%EF%BC%9A"><span class="toc-number">3.7.</span> <span class="toc-text">7.POP：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-PUSH%EF%BC%9A"><span class="toc-number">3.8.</span> <span class="toc-text">8.PUSH：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-SP%EF%BC%88Stack-Pointer%EF%BC%89%EF%BC%9A"><span class="toc-number">3.9.</span> <span class="toc-text">9.SP（Stack Pointer）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-IP%EF%BC%88Instruction-Pointer%EF%BC%89%EF%BC%9A"><span class="toc-number">3.10.</span> <span class="toc-text">10.IP（Instruction Pointer）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-CISC%EF%BC%88Complex-Instruction-Set-Computer%EF%BC%89%EF%BC%9A"><span class="toc-number">3.11.</span> <span class="toc-text">11.CISC（Complex Instruction Set Computer）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-RISC%EF%BC%88Reduced-Instruction-Set-Computer%EF%BC%89%EF%BC%9A"><span class="toc-number">3.12.</span> <span class="toc-text">12.RISC（Reduced Instruction Set Computer）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-FE%EF%BC%88Fetch%EF%BC%8C%E5%8F%96%E6%8C%87%EF%BC%89"><span class="toc-number">3.13.</span> <span class="toc-text">13.FE（Fetch，取指）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-IND%EF%BC%88Instruction-Decode%EF%BC%8C%E6%8C%87%E4%BB%A4%E8%A7%A3%E7%A0%81%EF%BC%89%EF%BC%9A"><span class="toc-number">3.14.</span> <span class="toc-text">14.IND（Instruction Decode，指令解码）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-EX%EF%BC%88Execute%EF%BC%8C%E6%89%A7%E8%A1%8C%EF%BC%89%EF%BC%9A"><span class="toc-number">3.15.</span> <span class="toc-text">15.EX（Execute，执行）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-INT%EF%BC%88Interrupt%EF%BC%8C%E4%B8%AD%E6%96%AD%EF%BC%89%EF%BC%9A"><span class="toc-number">3.16.</span> <span class="toc-text">16.INT（Interrupt，中断）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-ID-Instruction-Decoder"><span class="toc-number">3.17.</span> <span class="toc-text">17.ID(Instruction Decoder):</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18-LDA-Load-Accumulator-%EF%BC%9A"><span class="toc-number">3.18.</span> <span class="toc-text">18.LDA(Load Accumulator)：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19-CM%EF%BC%88Control-Memory%EF%BC%8C%E6%8E%A7%E5%88%B6%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%89%EF%BC%9A"><span class="toc-number">3.19.</span> <span class="toc-text">19.CM（Control Memory，控制存储器）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20-CMAR%EF%BC%88Control-Memory-Address-Register%EF%BC%8C%E6%8E%A7%E5%88%B6%E5%AD%98%E5%82%A8%E5%99%A8%E5%9C%B0%E5%9D%80%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%89%EF%BC%9A"><span class="toc-number">3.20.</span> <span class="toc-text">20.CMAR（Control Memory Address Register，控制存储器地址寄存器）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-CMDR%EF%BC%88Control-Memory-Data-Register%EF%BC%8C%E6%8E%A7%E5%88%B6%E5%AD%98%E5%82%A8%E5%99%A8%E6%95%B0%E6%8D%AE%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%89%EF%BC%9A"><span class="toc-number">3.21.</span> <span class="toc-text">21.CMDR（Control Memory Data Register，控制存储器数据寄存器）：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CPU%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="toc-number">4.</span> <span class="toc-text">CPU性能指标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-CPI%EF%BC%88Cycles-Per-Instruction%EF%BC%89"><span class="toc-number">4.1.</span> <span class="toc-text">1.CPI（Cycles Per Instruction）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-IPS%EF%BC%88Instructions-Per-Second%EF%BC%89"><span class="toc-number">4.2.</span> <span class="toc-text">2.IPS（Instructions Per Second）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-FLOPS%EF%BC%88Floating-Point-Operations-Per-Second%EF%BC%89"><span class="toc-number">4.3.</span> <span class="toc-text">3.FLOPS（Floating Point Operations Per Second）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4"><span class="toc-number">5.</span> <span class="toc-text">指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-CLA%EF%BC%88Clear-Accumulator%EF%BC%89%EF%BC%9A"><span class="toc-number">5.1.</span> <span class="toc-text">1.CLA（Clear Accumulator）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-COM%EF%BC%88Complement%EF%BC%89%EF%BC%9A"><span class="toc-number">5.2.</span> <span class="toc-text">2.COM（Complement）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-SHR%EF%BC%88Shift-Right%EF%BC%89%EF%BC%9A"><span class="toc-number">5.3.</span> <span class="toc-text">3.SHR（Shift Right）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-CSL%EF%BC%88Circular-Shift-Left%EF%BC%89%EF%BC%9A"><span class="toc-number">5.4.</span> <span class="toc-text">4.CSL（Circular Shift Left）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-STP%EF%BC%88Stop%EF%BC%89%EF%BC%9A"><span class="toc-number">5.5.</span> <span class="toc-text">5.STP（Stop）：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text">多处理器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">7.</span> <span class="toc-text">其他</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-FA%EF%BC%88Full-Adder%EF%BC%89"><span class="toc-number">7.1.</span> <span class="toc-text">1.FA（Full Adder）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E5%99%A8%EF%BC%88MUX%EF%BC%8CMultiplexer%EF%BC%89"><span class="toc-number">7.2.</span> <span class="toc-text">2.多路复用器（MUX，Multiplexer）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-OF%EF%BC%88Overflow-Flag%EF%BC%89"><span class="toc-number">7.3.</span> <span class="toc-text">3.OF（Overflow Flag）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-SF%EF%BC%88Sign-Flag%EF%BC%89"><span class="toc-number">7.4.</span> <span class="toc-text">4.SF（Sign Flag）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-ZF%EF%BC%88Zero-Flag%EF%BC%89%EF%BC%9A"><span class="toc-number">7.5.</span> <span class="toc-text">5.ZF（Zero Flag）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-CF%EF%BC%88Carry-Flag%EF%BC%89%EF%BC%9A"><span class="toc-number">7.6.</span> <span class="toc-text">6.CF（Carry Flag）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-MSB%EF%BC%88Most-Significant-Bit%EF%BC%89"><span class="toc-number">7.7.</span> <span class="toc-text">7.MSB（Most Significant Bit）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-LSB%EF%BC%88Least-Significant-Bit%EF%BC%89"><span class="toc-number">7.8.</span> <span class="toc-text">8.LSB（Least Significant Bit）</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 By 小马Ti</div><div class="footer_custom_text">你好啊,朋友.欢迎来到我的博客!</div></div></footer></div><div id="rightside"><!-- - const showArray = enable ? show && show.split(',') : ['toc','chat','comment']--><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">简</button><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"><span id="percent">0<span>%</span></span></i></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>(() => {
+  const panguFn = () => {
+    if (typeof pangu === 'object') pangu.autoSpacingPage()
+    else {
+      btf.getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+        .then(() => {
+          pangu.autoSpacingPage()
+        })
+    }
+  }
+
+  const panguInit = () => {
+    if (false){
+      GLOBAL_CONFIG_SITE.isPost && panguFn()
+    } else {
+      panguFn()
+    }
+  }
+
+  btf.addGlobalFn('pjaxComplete', panguInit, 'pangu')
+  document.addEventListener('DOMContentLoaded', panguInit)
+})()</script><div class="js-pjax"><script>(() => {
+  const loadMathjax = () => {
+    if (!window.MathJax) {
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          tags: 'none',
+        },
+        chtml: {
+          scale: 1.1
+        },
+        options: {
+          enableMenu: true,
+          renderActions: {
+            findScript: [10, doc => {
+              for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+                const display = !!node.type.match(/; *mode=display/)
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+                const text = document.createTextNode('')
+                node.parentNode.replaceChild(text, node)
+                math.start = {node: text, delim: '', n: 0}
+                math.end = {node: text, delim: '', n: 0}
+                doc.math.push(math)
+              }
+            }, '']
+          }
+        }
+      }
+      
+      const script = document.createElement('script')
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+      script.id = 'MathJax-script'
+      script.async = true
+      document.head.appendChild(script)
+    } else {
+      MathJax.startup.document.state(0)
+      MathJax.texReset()
+      MathJax.typesetPromise()
+    }
+  }
+
+  btf.addGlobalFn('encrypt', loadMathjax, 'mathjax')
+  window.pjax ? loadMathjax() : window.addEventListener('load', loadMathjax)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !true) {
+    if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script><script defer data-pjax src="/js/readPercent.js"></script><script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script><script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="false"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="天,地,人" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
