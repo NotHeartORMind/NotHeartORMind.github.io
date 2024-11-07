@@ -48,4 +48,17 @@
 <p>4.前端</p>
 ]]></content>
   </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/07/%E6%8F%90%E4%BA%A4%E7%9A%84%E6%AD%A5%E9%AA%A4/</url>
+    <content><![CDATA[<p>1.初始化本地仓库<br>git init</p>
+<p>2.配置连接<br>git config –global user.name<br>git config –global user.email<br>例子:<br>![[Attachments&#x2F;Pasted image 20241014162021.png]]</p>
+<p>3.将本地仓库与远程仓库建立连接<br>git remote add origin<br>例子<br>![[Attachments&#x2F;Pasted image 20241014162104.png]]<br>4.先拉取远程仓库的最新更改<br>git pull origin master –allow-unrelated-histories</p>
+<p>5.添加文件到暂存区<br>git add </p>
+<p>6.提交代码到本地仓库<br>git commit -m “附加信息”</p>
+<p>7.推送到远程 Gitee 仓库<br>git push origin master</p>
+<p>清除命令<br>git config –global –unset http.proxy<br>git config –global –unset https.proxy</p>
+<p>配置命令<br>git config –global http.proxy  127.0.0.1:7890<br>git config –global https.proxy  127.0.0.1:7890</p>
+]]></content>
+  </entry>
 </search>
