@@ -93,12 +93,15 @@
   category_per_img:
   
   # The background image of footer
-  footer_img: true
+  footer_img: false
   
   # Website Background
   # Can set it to color or image url
-  background:
-    orange
+  background: 
+    "https://s2.loli.net/2024/11/07/BI1ZP7wjgN3hzMv.jpg"
+    
+    
+
   
   cover:
     # Disable the cover or not
@@ -151,7 +154,7 @@
   index_site_info_top:
   # The height of top_img, eg: 300px/300em/300rem
   index_top_img_height:
-    400px
+    800px
   
   # 主页subtitle
   subtitle:
@@ -270,7 +273,7 @@
     custom_text:
       你好啊,朋友.欢迎来到我的博客!
     # Copyright of theme and framework
-    copyright: true
+    copyright: false
   
   # --------------------------------------
   # Aside Settings
@@ -295,10 +298,10 @@
         enable: true
         icon: fab fa-github
         text: Follow Me
-        link: https://github.com/xxxxxx
+        link: https://github.com/NotHeartORMind
     card_announcement:
       enable: true
-      content: This is my Blog
+      content: This is XiaomaTi' Blog
     card_recent_post:
       enable: true
       # If set 0 will show all
@@ -843,19 +846,19 @@
   # canvas_ribbon
   # See: https://github.com/hustcc/ribbon.js
   canvas_ribbon:
-    enable: false
+    enable: true
     # The size of ribbon
     size: 150
     # The opacity of ribbon (0 ~ 1)
     alpha: 0.6
     zIndex: -1
     click_to_change: false
-    mobile: false
+    mobile: true
   
   # Fluttering Ribbon
   canvas_fluttering_ribbon:
-    enable: false
-    mobile: false
+    enable: true
+    mobile: true
   
   # canvas_nest
   # https://github.com/hustcc/canvas-nest.js
@@ -1043,8 +1046,10 @@
   # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
   inject:
     head:
+        - <script async src="https://npm.elemecdn.com/tzy-blog/lib/js/other/sakura.js"></script>
         - <link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"> # 引入组件库(f12)
         - <link rel="stylesheet" href="/css/readPercent.css">
+        - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
       # - <link rel="stylesheet" href="/xxx.css">
     bottom:
       - <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
@@ -1127,4 +1132,14 @@
       # valine:
       # waline_css:
       # waline_js:
+  # Need to install the hexo-wordcount plugin
+    wordcount:
+      enable: true
+      # Display the word count of the article in post meta
+      post_wordcount: true
+      # Display the time to read the article in post meta
+      min2read: true
+      # Display the total word count of the website in aside's webinfo
+      total_wordcount: true
+
   
