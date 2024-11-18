@@ -23558,13 +23558,7 @@
 <h3 id="2-安装模块"><a href="#2-安装模块" class="headerlink" title="2..安装模块"></a>2..安装模块</h3><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241117162334991.png" alt="image-20241117162334991"></p>
 <p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241117162352112.png" alt="image-20241117162352112"></p>
 <p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241117162445103.png" alt="image-20241117162445103"></p>
-<h3 id="3-卸载模块"><a href="#3-卸载模块" class="headerlink" title="3.卸载模块"></a>3.卸载模块</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm uninstall vue jquery</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
+<h3 id="3-卸载模块"><a href="#3-卸载模块" class="headerlink" title="3.卸载模块"></a>3.卸载模块</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm uninstall vue jquery</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Front-EndAdvancement</category>
       </categories>
@@ -23784,9 +23778,7 @@
 <h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>reduce 可以将数组中的多个值汇总、合并或转化为一个单一的值，通常用于处理复杂的聚合或累积操作。</p>
 <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>reduce 提供了一种强大的方式来对数组进行聚合、转换、递归等操作。它比传统的循环方法更加灵活和简洁，适用于许多复杂的场景。</p>
 <h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>reduce() 接受一个回调函数和一个可选的初始值作为参数。回调函数的执行会在数组的每个元素上进行，回调函数的签名如下：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">array.<span class="title function_">reduce</span>(<span class="keyword">function</span>(<span class="params">accumulator, currentValue, currentIndex, array</span>) &#123;</span><br><span class="line">  <span class="comment">// 返回新的累积值</span></span><br><span class="line">&#125;, initialValue);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">accumulator（累加器）：存储着上一次回调函数的返回值，在第一次执行时为 initialValue（如果提供了初始值），否则为数组中的第一个元素。</span></span><br><span class="line"><span class="comment">currentValue（当前值）：当前正在处理的数组元素。</span></span><br><span class="line"><span class="comment">currentIndex（可选）：当前值的索引。</span></span><br><span class="line"><span class="comment">array（可选）：原数组本身。</span></span><br><span class="line"><span class="comment">initialValue（可选）：初始值，会作为第一次执行回调函数时的 accumulator 值。如果没有提供，默认使用数组的第一个元素。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">array.<span class="title function_">reduce</span>(<span class="keyword">function</span>(<span class="params">accumulator, currentValue, currentIndex, array</span>) &#123;</span><br><span class="line">  <span class="comment">// 返回新的累积值</span></span><br><span class="line">&#125;, initialValue);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">accumulator（累加器）：存储着上一次回调函数的返回值，在第一次执行时为 initialValue（如果提供了初始值），否则为数组中的第一个元素。</span></span><br><span class="line"><span class="comment">currentValue（当前值）：当前正在处理的数组元素。</span></span><br><span class="line"><span class="comment">currentIndex（可选）：当前值的索引。</span></span><br><span class="line"><span class="comment">array（可选）：原数组本身。</span></span><br><span class="line"><span class="comment">initialValue（可选）：初始值，会作为第一次执行回调函数时的 accumulator 值。如果没有提供，默认使用数组的第一个元素。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Front-EndAdvancement</category>
       </categories>
@@ -23822,13 +23814,7 @@
 <h4 id="2-嵌入变量："><a href="#2-嵌入变量：" class="headerlink" title="2.嵌入变量："></a>2.嵌入变量：</h4><p>通过 ${变量名}。</p>
 <h4 id="3-嵌入表达式："><a href="#3-嵌入表达式：" class="headerlink" title="3.嵌入表达式："></a>3.嵌入表达式：</h4><p>通过 ${表达式}。</p>
 <h4 id="4-处理多行："><a href="#4-处理多行：" class="headerlink" title="4.处理多行："></a>4.处理多行：</h4><p>直接回车换行即可。</p>
-<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">&quot;张三&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> age = <span class="number">25</span>;</span><br><span class="line"><span class="keyword">const</span> greeting = <span class="string">`你好，我是 <span class="subst">$&#123;name&#125;</span>，今年 <span class="subst">$&#123;age&#125;</span> 岁。`</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(greeting);</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">&quot;张三&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> age = <span class="number">25</span>;</span><br><span class="line"><span class="keyword">const</span> greeting = <span class="string">`你好，我是 <span class="subst">$&#123;name&#125;</span>，今年 <span class="subst">$&#123;age&#125;</span> 岁。`</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(greeting);</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Front-EndAdvancement</category>
       </categories>
@@ -23882,9 +23868,7 @@
 <h2 id="结构形式"><a href="#结构形式" class="headerlink" title="结构形式"></a>结构形式</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params">a = <span class="number">10</span></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">foo</span>(); <span class="comment">// 输出：10</span></span><br><span class="line"><span class="title function_">foo</span>(<span class="number">5</span>); <span class="comment">// 输出：5</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>默认参数的目的是简化函数的参数处理，避免为每个缺省的参数手动检查 undefined 或 null，使函数在调用时更加简洁、容错性更强。</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="1-在函数声明时使用-给参数设置默认值。"><a href="#1-在函数声明时使用-给参数设置默认值。" class="headerlink" title="1.在函数声明时使用 &#x3D; 给参数设置默认值。"></a>1.在函数声明时使用 &#x3D; 给参数设置默认值。</h3><h3 id="2-默认值会在参数未传入或传入-undefined-时生效。"><a href="#2-默认值会在参数未传入或传入-undefined-时生效。" class="headerlink" title="2.默认值会在参数未传入或传入 undefined 时生效。"></a>2.默认值会在参数未传入或传入 undefined 时生效。</h3><h3 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">greet</span>(<span class="params">name = <span class="string">&quot;游客&quot;</span></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`你好，<span class="subst">$&#123;name&#125;</span>!`</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">greet</span>(); <span class="comment">// 输出：你好，游客!</span></span><br><span class="line"><span class="title function_">greet</span>(<span class="string">&quot;小明&quot;</span>); <span class="comment">// 输出：你好，小明!</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="1-在函数声明时使用-给参数设置默认值。"><a href="#1-在函数声明时使用-给参数设置默认值。" class="headerlink" title="1.在函数声明时使用 &#x3D; 给参数设置默认值。"></a>1.在函数声明时使用 &#x3D; 给参数设置默认值。</h3><h3 id="2-默认值会在参数未传入或传入-undefined-时生效。"><a href="#2-默认值会在参数未传入或传入-undefined-时生效。" class="headerlink" title="2.默认值会在参数未传入或传入 undefined 时生效。"></a>2.默认值会在参数未传入或传入 undefined 时生效。</h3><h3 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">greet</span>(<span class="params">name = <span class="string">&quot;游客&quot;</span></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`你好，<span class="subst">$&#123;name&#125;</span>!`</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">greet</span>(); <span class="comment">// 输出：你好，游客!</span></span><br><span class="line"><span class="title function_">greet</span>(<span class="string">&quot;小明&quot;</span>); <span class="comment">// 输出：你好，小明!</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Front-EndAdvancement</category>
       </categories>
