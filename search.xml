@@ -23511,4 +23511,329 @@
         <category>人祖传</category>
       </categories>
   </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/Babel/</url>
+    <content><![CDATA[<h1 id="Babel"><a href="#Babel" class="headerlink" title="Babel"></a>Babel</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>Babel 是一个将现代 JavaScript 转化为兼容旧版 JavaScript 语法的工具，支持将 ES6+ 语法转换为 ES5 语法。</p>
+<h2 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h2><p>包括 Babel Core（核心转译功能）、Babel CLI（命令行工具）、Babel Plugins（插件系统）和 Babel Presets（预设插件集合）。</p>
+<h2 id="结构形式"><a href="#结构形式" class="headerlink" title="结构形式"></a>结构形式</h2><p>Babel 的功能由一系列插件和预设组成，使用时可以根据需要配置不同的插件来实现特定功能。</p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>通过将现代 JavaScript 特性转译成老版本 JavaScript 代码，确保代码能在不同的浏览器和 Node 环境中运行。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>帮助开发者在不担心兼容性的前提下，使用现代 JavaScript 特性，提升开发效率和代码质量。</p>
+<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p>Babel 通过解析源代码，生成抽象语法树（AST），再根据插件配置进行相应的语法转译。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/Babel%20%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="Babel使用"><a href="#Babel使用" class="headerlink" title="Babel使用"></a>Babel使用</h1><h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><p>npm install  -g babel-cli</p>
+<h2 id="2-使用方法"><a href="#2-使用方法" class="headerlink" title="2.使用方法"></a>2.使用方法</h2><h3 id="1-创建babel文件夹"><a href="#1-创建babel文件夹" class="headerlink" title="1.创建babel文件夹"></a>1.创建babel文件夹</h3><h3 id="2-初始化项目"><a href="#2-初始化项目" class="headerlink" title="2.初始化项目"></a>2.初始化项目</h3><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118105934510.png" alt="image-20241118105934510"></p>
+<h3 id="3-创建一个文件夹-并在里面创建JavaScript代码"><a href="#3-创建一个文件夹-并在里面创建JavaScript代码" class="headerlink" title="3.创建一个文件夹,并在里面创建JavaScript代码"></a>3.创建一个文件夹,并在里面创建JavaScript代码</h3><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118110006029.png" alt="image-20241118110006029"></p>
+<h3 id="4-配置-babelrc文件"><a href="#4-配置-babelrc文件" class="headerlink" title="4.配置.babelrc文件"></a>4.配置.babelrc文件</h3><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118110054865.png" alt="image-20241118110054865"></p>
+<h3 id="5-安装转码器-在项目中安装"><a href="#5-安装转码器-在项目中安装" class="headerlink" title="5.安装转码器,在项目中安装"></a>5.安装转码器,在项目中安装</h3><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118110205570.png" alt="image-20241118110205570"></p>
+<h3 id="6-转码"><a href="#6-转码" class="headerlink" title="6.转码"></a>6.转码</h3><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118142416041.png" alt="image-20241118142416041"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<h1 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>NPM是Node.js的包管理器，它提供了一个中央仓库（npm registry）用于托管和分享开源的JavaScript代码包。开发者可以使用NPM工具安装、更新、卸载这些包，并管理项目中不同的依赖关系。</p>
+<h2 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h2><p>1.npm registry：一个在线的存储库，包含了成千上万的JavaScript包。开发者可以将自己的包发布到该仓库，也可以从中安装包。<br>2.npm CLI（命令行工具）：NPM的命令行工具，允许开发者通过终端与npm registry交互，进行包的安装、管理、发布等操作。<br>3.package.json：一个JSON格式的文件，用于描述一个Node.js项目的元数据，包括项目名称、版本、依赖包等信息。这个文件帮助NPM正确安装并管理项目的依赖。</p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>1.安装和管理依赖包：通过NPM，开发者可以轻松安装、更新、卸载项目依赖的包。<br>2.版本管理：NPM支持版本控制，可以指定每个依赖包的具体版本，保证项目的一致性和可维护性。<br>3.发布和共享包：开发者可以通过NPM发布自己的JavaScript包，使其他开发者可以共享和使用。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>NPM的主要目的是简化开发者在Node.js项目中的包管理任务，使得项目中的依赖关系更加清晰且容易维护。它还能通过提供丰富的工具和脚本功能，提升开发效率。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/NPM%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="NPM的使用"><a href="#NPM的使用" class="headerlink" title="NPM的使用"></a>NPM的使用</h1><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="1-快速构建node-js工程"><a href="#1-快速构建node-js工程" class="headerlink" title="1.快速构建node.js工程"></a>1.快速构建node.js工程</h3><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241117162313218.png" alt="image-20241117162313218"></p>
+<h3 id="2-安装模块"><a href="#2-安装模块" class="headerlink" title="2..安装模块"></a>2..安装模块</h3><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241117162334991.png" alt="image-20241117162334991"></p>
+<p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241117162352112.png" alt="image-20241117162352112"></p>
+<p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241117162445103.png" alt="image-20241117162445103"></p>
+<h3 id="3-卸载模块"><a href="#3-卸载模块" class="headerlink" title="3.卸载模块"></a>3.卸载模块</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm uninstall vue jquery</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/ES6%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<h1 id="ES6简介"><a href="#ES6简介" class="headerlink" title="ES6简介"></a>ES6简介</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p> ES6（ECMAScript 2015）是JavaScript语言的第六个版本，也是JavaScript的一个重大更新。它对语言进行了语法扩展和功能增强，增加了许多新的特性，旨在提高开发效率、可读性和性能。ES6是ECMAScript规范的一部分，这个版本在JavaScript的历史中起到了重要作用。</p>
+<h2 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h2><p> ES6的新增特性包括但不限于以下几个重要部分：</p>
+<p>1.块级作用域：let 和 const 关键字的引入，使变量和常量可以在块级作用域中使用，避免了 var 的函数作用域问题。<br>2.箭头函数：提供了一种简洁的函数定义方式，并且自动绑定 this，简化了回调函数的使用。<br>3.类（class）：JavaScript原生支持面向对象编程，提供了 class 关键字，用来创建类。<br>4.模板字符串：使用反引号（&#96;）定义多行字符串，支持变量插值。<br>5.解构赋值：通过结构化的方式提取数组或对象的值。<br>6.Promise：引入了异步编程的解决方案，替代了传统的回调函数，减少了“回调地狱”的问题。<br>7.模块化：引入了 import 和 export 语法，允许将代码分成模块进行管理。<br>8.生成器函数（Generator Functions）：引入了生成器函数，允许函数在执行过程中多次暂停和恢复，支持异步操作。</p>
+<h2 id="结构形式"><a href="#结构形式" class="headerlink" title="结构形式"></a>结构形式</h2><p> ES6的结构形式上延续了ECMAScript的基本框架，但通过引入新的语法和功能，扩展了语言的表现力。常见的结构形式包括：</p>
+<h3 id="1-块级作用域："><a href="#1-块级作用域：" class="headerlink" title="1.块级作用域："></a>1.块级作用域：</h3><p>let 和 const 的作用范围仅限于代码块。</p>
+<h3 id="2-函数表达式："><a href="#2-函数表达式：" class="headerlink" title="2.函数表达式："></a>2.函数表达式：</h3><p>简化了匿名函数的书写形式。</p>
+<h3 id="3-类与对象："><a href="#3-类与对象：" class="headerlink" title="3.类与对象："></a>3.类与对象：</h3><p>基于原型的继承引入了类的语法糖，简化了面向对象编程。</p>
+<h3 id="4-异步编程："><a href="#4-异步编程：" class="headerlink" title="4.异步编程："></a>4.异步编程：</h3><p>通过 Promise 和 async&#x2F;await，解决了回调函数中的异步问题。</p>
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="1-语法糖："><a href="#1-语法糖：" class="headerlink" title="1.语法糖："></a>1.语法糖：</h3><p>ES6通过引入新的语法，使得代码更加简洁和易于理解，例如箭头函数、模板字符串、解构赋值等。</p>
+<h3 id="2-异步编程："><a href="#2-异步编程：" class="headerlink" title="2.异步编程："></a>2.异步编程：</h3><p>ES6通过 Promise 和后续的 async&#x2F;await 改善了JavaScript的异步编程能力，避免了复杂的回调嵌套。</p>
+<h3 id="3-模块化："><a href="#3-模块化：" class="headerlink" title="3.模块化："></a>3.模块化：</h3><p>通过 import 和 export 实现了代码模块化管理，增强了代码的可维护性和重用性。</p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p> ES6为JavaScript提供了更加强大的语法和功能，使得JavaScript在大型应用开发中更具可维护性和扩展性。它使得代码更加简洁、易于理解，并且有助于提高开发效率。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p> 使用ES6的目的是为了提升JavaScript的功能性、简洁性和可维护性。它通过引入新的语法和工具，使得开发者能够更加高效地编写和管理代码，同时避免过去版本中存在的一些缺陷。</p>
+<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><h3 id="1-简化语法："><a href="#1-简化语法：" class="headerlink" title="1.简化语法："></a>1.简化语法：</h3><p>ES6通过语法糖（如箭头函数、模板字符串等）简化了JavaScript的写法，使得代码更加简洁明了。</p>
+<h3 id="2-异步编程支持："><a href="#2-异步编程支持：" class="headerlink" title="2.异步编程支持："></a>2.异步编程支持：</h3><p>ES6引入了Promise和生成器等异步编程工具，优化了异步代码的编写，避免了回调地狱。</p>
+<h3 id="3-模块化设计："><a href="#3-模块化设计：" class="headerlink" title="3.模块化设计："></a>3.模块化设计：</h3><p>通过import和export，使得JavaScript代码可以模块化管理，提高了可维护性。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/Babel%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC/</url>
+    <content><![CDATA[<h1 id="自定义脚本"><a href="#自定义脚本" class="headerlink" title="自定义脚本"></a>自定义脚本</h1><h2 id="1-改写package-json"><a href="#1-改写package-json" class="headerlink" title="1.改写package.json"></a>1.改写package.json</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118142510560.png" alt="image-20241118142510560"></p>
+<h2 id="2-转码的时候-执行改写后的命令"><a href="#2-转码的时候-执行改写后的命令" class="headerlink" title="2.转码的时候,执行改写后的命令"></a>2.转码的时候,执行改写后的命令</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118142518461.png" alt="image-20241118142518461"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/WebPack%E5%90%88%E5%B9%B6JS/</url>
+    <content><![CDATA[<h1 id="合并JS"><a href="#合并JS" class="headerlink" title="合并JS"></a>合并JS</h1><h2 id="1-创建webpack文件夹"><a href="#1-创建webpack文件夹" class="headerlink" title="1.创建webpack文件夹"></a>1.创建webpack文件夹</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118163900595.png" alt="image-20241118163900595"></p>
+<h2 id="2-创建src文件夹"><a href="#2-创建src文件夹" class="headerlink" title="2.创建src文件夹"></a>2.创建src文件夹</h2><h2 id="3-src下面创建一个js文件"><a href="#3-src下面创建一个js文件" class="headerlink" title="3.src下面创建一个js文件"></a>3.src下面创建一个js文件</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118163914977.png" alt="image-20241118163914977"></p>
+<h2 id="4-src下面再创建一个js文件"><a href="#4-src下面再创建一个js文件" class="headerlink" title="4.src下面再创建一个js文件"></a>4.src下面再创建一个js文件</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118163925115.png" alt="image-20241118163925115"></p>
+<h2 id="5-src创建一个main-js作为打包的入口"><a href="#5-src创建一个main-js作为打包的入口" class="headerlink" title="5.src创建一个main.js作为打包的入口"></a>5.src创建一个main.js作为打包的入口</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118163940017.png" alt="image-20241118163940017"></p>
+<h2 id="6-在根目录下定义一个webpack-config-js文件配置打包的规则"><a href="#6-在根目录下定义一个webpack-config-js文件配置打包的规则" class="headerlink" title="6.在根目录下定义一个webpack.config.js文件配置打包的规则"></a>6.在根目录下定义一个webpack.config.js文件配置打包的规则</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118164237023.png" alt="image-20241118164237023"></p>
+<h2 id="7-执行webpack命令-查看效果"><a href="#7-执行webpack命令-查看效果" class="headerlink" title="7.执行webpack命令,查看效果"></a>7.执行webpack命令,查看效果</h2>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/WebPack%E5%90%88%E5%B9%B6Css/</url>
+    <content><![CDATA[<h1 id="合并Css"><a href="#合并Css" class="headerlink" title="合并Css"></a>合并Css</h1><h2 id="1-第一步安装模块"><a href="#1-第一步安装模块" class="headerlink" title="1.第一步安装模块"></a>1.第一步安装模块</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118165558130.png" alt="image-20241118165558130"></p>
+<h2 id="2-修改webpack-config-js"><a href="#2-修改webpack-config-js" class="headerlink" title="2.修改webpack.config.js"></a>2.修改webpack.config.js</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118165609460.png" alt="image-20241118165609460"></p>
+<h2 id="3-在src文件夹中创建css文件"><a href="#3-在src文件夹中创建css文件" class="headerlink" title="3.在src文件夹中创建css文件"></a>3.在src文件夹中创建css文件</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118171019584.png" alt="image-20241118171019584"></p>
+<h2 id="4-修改main-js-在第一行引入css文件"><a href="#4-修改main-js-在第一行引入css文件" class="headerlink" title="4.修改main.js,在第一行引入css文件"></a>4.修改main.js,在第一行引入css文件</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118171025569.png" alt="image-20241118171025569"></p>
+<h2 id="5-运行编译命令"><a href="#5-运行编译命令" class="headerlink" title="5.运行编译命令"></a>5.运行编译命令</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118171031107.png" alt="image-20241118171031107"></p>
+<h2 id="6-查看效果"><a href="#6-查看效果" class="headerlink" title="6.查看效果"></a>6.查看效果</h2>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/WebPack%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<h1 id="WebPack概述"><a href="#WebPack概述" class="headerlink" title="WebPack概述"></a>WebPack概述</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>Webpack 是一个开源的前端静态模块打包工具。它会根据模块的依赖关系，递归地将项目的所有资源（如 JavaScript、CSS、图片等）打包成静态文件，以提高网页加载和运行效率。</p>
+<h2 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h2><p>1.Entry（入口）：Webpack 构建的起点，指定从哪个文件开始分析依赖关系。<br>2.Output（输出）：Webpack 打包后文件的输出位置和命名规则。<br>3.Loaders（加载器）：用于转换不同类型的模块（如将 TypeScript 转换为 4.JavaScript，或将 SASS 转换为 CSS）。<br>5.Plugins（插件）：扩展 Webpack 功能的模块，比如优化打包结果、管理环境变量等。<br>6.Mode（模式）：运行模式，分为开发模式（development）和生产模式（production）。</p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>通过模块化打包，解决前端资源管理混乱的问题，提高项目的开发效率和运行性能。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>1.整合前端资源，优化加载效率。<br>2.支持模块化开发，提升代码的可维护性和可复用性。<br>3.提供一整套构建工具链，适配不同的开发需求。</p>
+<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p>Webpack 将项目视为一个依赖图，从入口文件出发，递归解析依赖模块，将其转换为浏览器可识别的静态资源。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/WebPack%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118152457374.png" alt="image-20241118152457374"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/var.let.const%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+    <content><![CDATA[<h1 id="三者之间的区别"><a href="#三者之间的区别" class="headerlink" title="三者之间的区别"></a>三者之间的区别</h1><h2 id="1-声明后的可变性"><a href="#1-声明后的可变性" class="headerlink" title="1.声明后的可变性"></a>1.声明后的可变性</h2><h3 id="①-var-：变量可以随时重新赋值，也可以重复声明。"><a href="#①-var-：变量可以随时重新赋值，也可以重复声明。" class="headerlink" title="①**var**：变量可以随时重新赋值，也可以重复声明。"></a>①**<code>var</code>**：变量可以随时重新赋值，也可以重复声明。</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">20</span>; <span class="comment">// 允许重复声明</span></span><br><span class="line">a = <span class="number">30</span>; <span class="comment">// 可以重新赋值</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="②-let-：变量可以重新赋值，但不能重复声明。"><a href="#②-let-：变量可以重新赋值，但不能重复声明。" class="headerlink" title="②**let**：变量可以重新赋值，但不能重复声明。"></a>②**<code>let</code>**：变量可以重新赋值，但不能重复声明。</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> b = <span class="number">10</span>;</span><br><span class="line"><span class="comment">// let b = 20; // 报错：不能重复声明</span></span><br><span class="line">b = <span class="number">30</span>; <span class="comment">// 可以重新赋值</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="③-const-：变量声明后不能重新赋值，也不能重复声明。"><a href="#③-const-：变量声明后不能重新赋值，也不能重复声明。" class="headerlink" title="③**const**：变量声明后不能重新赋值，也不能重复声明。"></a>③**<code>const</code>**：变量声明后不能重新赋值，也不能重复声明。</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> c = <span class="number">10</span>;</span><br><span class="line"><span class="comment">// c = 20; // 报错：不能重新赋值</span></span><br><span class="line"><span class="comment">// const c = 30; // 报错：不能重复声明</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-作用域"><a href="#2-作用域" class="headerlink" title="2.作用域"></a>2.作用域</h2><h3 id="①-var-：受函数作用域限制，声明的变量在整个函数内部都可访问，不受块级作用域的限制。"><a href="#①-var-：受函数作用域限制，声明的变量在整个函数内部都可访问，不受块级作用域的限制。" class="headerlink" title="①**var**：受函数作用域限制，声明的变量在整个函数内部都可访问，不受块级作用域的限制。"></a>①**<code>var</code>**：受函数作用域限制，声明的变量在整个函数内部都可访问，不受块级作用域的限制。</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> x = <span class="number">10</span>; <span class="comment">// 函数作用域</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x); <span class="comment">// 10：块外仍然能访问</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="②-let-和-const-：采用块级作用域，变量只能在声明的块内使用，块外无法访问。"><a href="#②-let-和-const-：采用块级作用域，变量只能在声明的块内使用，块外无法访问。" class="headerlink" title="②**let** 和 **const**：采用块级作用域，变量只能在声明的块内使用，块外无法访问。"></a>②**<code>let</code>** 和 **<code>const</code>**：采用块级作用域，变量只能在声明的块内使用，块外无法访问。</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> y = <span class="number">20</span>;</span><br><span class="line">  <span class="keyword">const</span> z = <span class="number">30</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// console.log(y); // 报错：块外不能访问</span></span><br><span class="line"><span class="comment">// console.log(z); // 报错：块外不能访问</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-变量提升"><a href="#3-变量提升" class="headerlink" title="3.变量提升"></a>3.变量提升</h2><h3 id="①-var-：变量会提升到作用域顶部，并初始化为-undefined，可以在声明之前访问"><a href="#①-var-：变量会提升到作用域顶部，并初始化为-undefined，可以在声明之前访问" class="headerlink" title="①**var**：变量会提升到作用域顶部，并初始化为 undefined，可以在声明之前访问."></a>①**<code>var</code>**：变量会提升到作用域顶部，并初始化为 <code>undefined</code>，可以在声明之前访问.</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// undefined：变量已提升</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="②-let-和-const-：同样会提升到作用域顶部，但不会初始化，在声明之前访问会报错（称为“暂时性死区”）。"><a href="#②-let-和-const-：同样会提升到作用域顶部，但不会初始化，在声明之前访问会报错（称为“暂时性死区”）。" class="headerlink" title="②**let** 和 **const**：同样会提升到作用域顶部，但不会初始化，在声明之前访问会报错（称为“暂时性死区”）。"></a>②**<code>let</code>** 和 **<code>const</code>**：同样会提升到作用域顶部，但不会初始化，在声明之前访问会报错（称为“暂时性死区”）。</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// console.log(b); // 报错：在声明前不能访问</span></span><br><span class="line"><span class="keyword">let</span> b = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// console.log(c); // 报错：在声明前不能访问</span></span><br><span class="line"><span class="keyword">const</span> c = <span class="number">30</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-是否必须初始化"><a href="#4-是否必须初始化" class="headerlink" title="4.是否必须初始化"></a>4.是否必须初始化</h2><h3 id="①-var-和-let-：可以声明而不赋值，默认值为-undefined。"><a href="#①-var-和-let-：可以声明而不赋值，默认值为-undefined。" class="headerlink" title="①**var 和 let**：可以声明而不赋值，默认值为 undefined。"></a>①**<code>var</code> 和 <code>let</code>**：可以声明而不赋值，默认值为 <code>undefined</code>。</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> g;</span><br><span class="line"><span class="keyword">let</span> h;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(g); <span class="comment">// undefined</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(h); <span class="comment">// undefined</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="②const：声明时必须同时赋值，否则报错"><a href="#②const：声明时必须同时赋值，否则报错" class="headerlink" title="②const：声明时必须同时赋值，否则报错."></a>②const：声明时必须同时赋值，否则报错.</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// const i; // 报错：必须初始化</span></span><br><span class="line"><span class="keyword">const</span> j = <span class="number">10</span>; <span class="comment">// 正确</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-是否绑定到全局对象"><a href="#5-是否绑定到全局对象" class="headerlink" title="5.是否绑定到全局对象"></a>5.是否绑定到全局对象</h2><h3 id="①-var-：在全局作用域中声明的变量会绑定到-window-对象（浏览器环境）。"><a href="#①-var-：在全局作用域中声明的变量会绑定到-window-对象（浏览器环境）。" class="headerlink" title="①**var**：在全局作用域中声明的变量会绑定到 window 对象（浏览器环境）。"></a>①**<code>var</code>**：在全局作用域中声明的变量会绑定到 <code>window</code> 对象（浏览器环境）。</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> d = <span class="number">10</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">window</span>.<span class="property">d</span>); <span class="comment">// 10</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="②-let-和-const-：不会绑定到-window-对象。"><a href="#②-let-和-const-：不会绑定到-window-对象。" class="headerlink" title="②**let** 和 **const**：不会绑定到 window 对象。"></a>②**<code>let</code>** 和 **<code>const</code>**：不会绑定到 <code>window</code> 对象。</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> e = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">const</span> f = <span class="number">30</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">window</span>.<span class="property">e</span>); <span class="comment">// undefined</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">window</span>.<span class="property">f</span>); <span class="comment">// undefined</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="PS"><a href="#PS" class="headerlink" title="PS:"></a>PS:</h2><h3 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>是 JavaScript 的一种机制，指在代码执行阶段，变量声明和函数声明会被提升到其所在作用域的顶部进行处理。换句话说，尽管声明出现在代码的后面，JavaScript 引擎会在执行代码之前，将这些声明在内存中提升到作用域的顶部，但不会提升赋值操作。</p>
+<h4 id="核心点"><a href="#核心点" class="headerlink" title="核心点"></a><strong>核心点</strong></h4><h5 id="1-声明提升："><a href="#1-声明提升：" class="headerlink" title="1.声明提升："></a>1.声明提升：</h5><p>变量和函数的声明会被移动到作用域顶部。</p>
+<h5 id="2-赋值不提升："><a href="#2-赋值不提升：" class="headerlink" title="2.赋值不提升："></a>2.赋值不提升：</h5><p>只有声明被提升，赋值仍然停留在原来的位置。</p>
+<h5 id="3-影响作用域："><a href="#3-影响作用域：" class="headerlink" title="3.影响作用域："></a>3.影响作用域：</h5><p>变量提升遵循作用域规则，声明在全局作用域或函数作用域的顶部进行提升。</p>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><h5 id="1-变量声明提升"><a href="#1-变量声明提升" class="headerlink" title="1.变量声明提升"></a>1.变量声明提升</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 输出：undefined</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>等价于:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a; <span class="comment">// 声明被提升</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// undefined</span></span><br><span class="line">a = <span class="number">10</span>; <span class="comment">// 赋值在原位置</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-函数声明提升"><a href="#2-函数声明提升" class="headerlink" title="2.函数声明提升"></a>2.函数声明提升</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">sayHello</span>(); <span class="comment">// 输出：&quot;Hello&quot;</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">sayHello</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>等价于:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sayHello</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">sayHello</span>(); <span class="comment">// &quot;Hello&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="3-let-和-const-的“暂时性死区”"><a href="#3-let-和-const-的“暂时性死区”" class="headerlink" title="3.let 和 const 的“暂时性死区”"></a>3.<strong><code>let</code> 和 <code>const</code> 的“暂时性死区”</strong></h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(b); <span class="comment">// 抛出错误：Cannot access &#x27;b&#x27; before initialization</span></span><br><span class="line"><span class="keyword">let</span> b = <span class="number">20</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>尽管 <code>b</code> 的声明被提升，但它在初始化前不可访问，形成“暂时性死区”。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/%E4%BC%A0%E6%92%AD%E6%93%8D%E4%BD%9C%E7%AC%A6/</url>
+    <content><![CDATA[<h1 id="传播操作符"><a href="#传播操作符" class="headerlink" title="传播操作符"></a>传播操作符</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>传播操作符是用于扩展（展开）数组、对象等可迭代数据结构的语法，使得我们能够将它们拆解成独立的元素或者字段，或者将它们合并到其他数组或对象中。</p>
+<h2 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h2><p>传播操作符通常由三个点（…）组成，紧跟在其后的是需要展开的数据结构。</p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>可以用于数组和对象的浅拷贝、合并、扩展等操作，简化代码。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>通过简化代码的写法，减少手动拆解或合并数据的复杂度，使代码更加简洁、可读。</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241117151533985.png" alt="image-20241117151533985"></p>
+<h3 id="1-在数组中的使用"><a href="#1-在数组中的使用" class="headerlink" title="1.在数组中的使用"></a>1.在数组中的使用</h3><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241117151620553.png" alt="image-20241117151620553"></p>
+<h3 id="2-在对象中的使用"><a href="#2-在对象中的使用" class="headerlink" title="2.在对象中的使用"></a>2.在对象中的使用</h3><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241117151643409.png" alt="image-20241117151643409"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/%E6%95%B0%E7%BB%84Map/</url>
+    <content><![CDATA[<h1 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>map() 方法会创建一个新数组，数组中的每个元素是原数组的元素调用提供的函数后的返回值。它不会改变原数组。</p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>map 主要用于对数组进行元素的转换，映射每个元素为新值，常见于数据处理、渲染等场景。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>map 可以简化数组元素转换的操作，避免手动使用循环来处理每个元素，提升代码的可读性和简洁性。</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>map 方法接受一个回调函数作为参数，这个回调函数会对每个数组元素进行处理，并返回新值。map 方法会返回一个新的数组，该数组包含了回调函数返回的每个元素的值。</p>
+<p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241117152656931.png" alt="image-20241117152656931"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/%E6%A8%A1%E5%9D%97%E5%8C%96CommonJS%E8%A7%84%E8%8C%83/</url>
+    <content><![CDATA[<h1 id="模块化CommonJS规范"><a href="#模块化CommonJS规范" class="headerlink" title="模块化CommonJS规范"></a>模块化CommonJS规范</h1><h2 id="1-创建一个文件夹"><a href="#1-创建一个文件夹" class="headerlink" title="1.创建一个文件夹"></a>1.创建一个文件夹</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118144730097.png" alt="image-20241118144730097"></p>
+<h2 id="2-创建一个完成了功能的js文件"><a href="#2-创建一个完成了功能的js文件" class="headerlink" title="2.创建一个完成了功能的js文件"></a>2.创建一个完成了功能的js文件</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118144745642.png" alt="image-20241118144745642"></p>
+<h2 id="3-编写导出语句-来导出想要使用的函数"><a href="#3-编写导出语句-来导出想要使用的函数" class="headerlink" title="3.编写导出语句,来导出想要使用的函数"></a>3.编写导出语句,来导出想要使用的函数</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118144816385.png" alt="image-20241118144816385"></p>
+<h2 id="4-在其他的js中-导入类然后使用"><a href="#4-在其他的js中-导入类然后使用" class="headerlink" title="4.在其他的js中,导入类然后使用"></a>4.在其他的js中,导入类然后使用</h2><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118144908811.png" alt="image-20241118144908811"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/%E5%AF%B9%E8%B1%A1%E8%A7%A3%E6%9E%84/</url>
+    <content><![CDATA[<h1 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>对象解构（Object Destructuring）是 JavaScript ES6 引入的一种语法糖，允许我们从对象中提取出指定的属性，并将这些属性值赋给对应的变量。通过解构，代码更加简洁且易读。</p>
+<h2 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h2><h2 id="1-解构语法"><a href="#1-解构语法" class="headerlink" title="1.解构语法"></a>1.解构语法</h2><p>使用大括号 {} 来包裹解构的属性名称，左边是要定义的变量，右边是解构的对象。</p>
+<h2 id="2-属性名"><a href="#2-属性名" class="headerlink" title="2.属性名"></a>2.属性名</h2><p>解构时，变量的名称必须与对象的属性名称一致，除非使用别名。</p>
+<h2 id="结构形式"><a href="#结构形式" class="headerlink" title="结构形式"></a>结构形式</h2><h3 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1.基本语法"></a>1.基本语法</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123; <span class="attr">name</span>: <span class="string">&quot;John&quot;</span>, <span class="attr">age</span>: <span class="number">30</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> &#123; name, age &#125; = person;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name); <span class="comment">// 输出：&quot;John&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(age);  <span class="comment">// 输出：30</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-默认值"><a href="#2-默认值" class="headerlink" title="2.默认值"></a>2.默认值</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123; <span class="attr">name</span>: <span class="string">&quot;John&quot;</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> &#123; name, age = <span class="number">25</span> &#125; = person;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name); <span class="comment">// 输出：&quot;John&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(age);  <span class="comment">// 输出：25</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-使用别名"><a href="#3-使用别名" class="headerlink" title="3.使用别名"></a>3.使用别名</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123; <span class="attr">name</span>: <span class="string">&quot;John&quot;</span>, <span class="attr">age</span>: <span class="number">30</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> &#123; <span class="attr">name</span>: personName, <span class="attr">age</span>: personAge &#125; = person;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(personName); <span class="comment">// 输出：&quot;John&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(personAge);  <span class="comment">// 输出：30</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-嵌套解构"><a href="#4-嵌套解构" class="headerlink" title="4.嵌套解构"></a>4.嵌套解构</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123; <span class="attr">name</span>: <span class="string">&quot;John&quot;</span>, <span class="attr">address</span>: &#123; <span class="attr">city</span>: <span class="string">&quot;New York&quot;</span>, <span class="attr">zip</span>: <span class="string">&quot;10001&quot;</span> &#125; &#125;;</span><br><span class="line"><span class="keyword">const</span> &#123; name, <span class="attr">address</span>: &#123; city, zip &#125; &#125; = person;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name); <span class="comment">// 输出：&quot;John&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(city); <span class="comment">// 输出：&quot;New York&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(zip);  <span class="comment">// 输出：&quot;10001&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>对象解构的主要目的是提高代码的简洁性和可读性，特别是在从复杂对象中提取数据时，避免了繁琐的重复代码。它还可以简化函数参数的传递，尤其是当函数需要处理多个参数或嵌套对象时。</p>
+<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p>解构是基于对象的属性名来提取值的。如果对象中存在某个属性，则将该属性的值赋给对应的变量；如果不存在该属性，则可以使用默认值。</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="1-使用大括号-来包裹要解构的属性名，变量名应与对象的属性名一致。"><a href="#1-使用大括号-来包裹要解构的属性名，变量名应与对象的属性名一致。" class="headerlink" title="1.使用大括号 {} 来包裹要解构的属性名，变量名应与对象的属性名一致。"></a>1.使用大括号 {} 来包裹要解构的属性名，变量名应与对象的属性名一致。</h3><h3 id="2-可以为属性提供默认值，使用-语法进行赋值。"><a href="#2-可以为属性提供默认值，使用-语法进行赋值。" class="headerlink" title="2.可以为属性提供默认值，使用 &#x3D; 语法进行赋值。"></a>2.可以为属性提供默认值，使用 &#x3D; 语法进行赋值。</h3><h3 id="3-如果需要改变变量名，可以使用-来指定别名。"><a href="#3-如果需要改变变量名，可以使用-来指定别名。" class="headerlink" title="3.如果需要改变变量名，可以使用 : 来指定别名。"></a>3.如果需要改变变量名，可以使用 : 来指定别名。</h3><h3 id="4-对象解构可以直接在函数参数中使用。"><a href="#4-对象解构可以直接在函数参数中使用。" class="headerlink" title="4.对象解构可以直接在函数参数中使用。"></a>4.对象解构可以直接在函数参数中使用。</h3>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/%E6%95%B0%E7%BB%84Reduce/</url>
+    <content><![CDATA[<h1 id="数组Reduce"><a href="#数组Reduce" class="headerlink" title="数组Reduce"></a>数组Reduce</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>reduce() 方法通过接收一个回调函数，在数组的每个元素上依次执行该回调函数，并返回最终的单一结果。这个结果可以是任何类型的数据（例如数字、对象、数组等）。</p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>reduce 可以将数组中的多个值汇总、合并或转化为一个单一的值，通常用于处理复杂的聚合或累积操作。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>reduce 提供了一种强大的方式来对数组进行聚合、转换、递归等操作。它比传统的循环方法更加灵活和简洁，适用于许多复杂的场景。</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>reduce() 接受一个回调函数和一个可选的初始值作为参数。回调函数的执行会在数组的每个元素上进行，回调函数的签名如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">array.<span class="title function_">reduce</span>(<span class="keyword">function</span>(<span class="params">accumulator, currentValue, currentIndex, array</span>) &#123;</span><br><span class="line">  <span class="comment">// 返回新的累积值</span></span><br><span class="line">&#125;, initialValue);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">accumulator（累加器）：存储着上一次回调函数的返回值，在第一次执行时为 initialValue（如果提供了初始值），否则为数组中的第一个元素。</span></span><br><span class="line"><span class="comment">currentValue（当前值）：当前正在处理的数组元素。</span></span><br><span class="line"><span class="comment">currentIndex（可选）：当前值的索引。</span></span><br><span class="line"><span class="comment">array（可选）：原数组本身。</span></span><br><span class="line"><span class="comment">initialValue（可选）：初始值，会作为第一次执行回调函数时的 accumulator 值。如果没有提供，默认使用数组的第一个元素。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/%E6%A8%A1%E5%9D%97%E5%8C%96ES6%E8%A7%84%E8%8C%83/</url>
+    <content><![CDATA[<h1 id="模块化ES6规范"><a href="#模块化ES6规范" class="headerlink" title="模块化ES6规范"></a>模块化ES6规范</h1><h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><h3 id="第一种方式"><a href="#第一种方式" class="headerlink" title="第一种方式"></a>第一种方式</h3><h4 id="1-导出具体的函数"><a href="#1-导出具体的函数" class="headerlink" title="1.导出具体的函数"></a>1.导出具体的函数</h4><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118145048482.png" alt="image-20241118145048482"></p>
+<h4 id="2-导入并使用"><a href="#2-导入并使用" class="headerlink" title="2.导入并使用"></a>2.导入并使用</h4><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118145112688.png" alt="image-20241118145112688"></p>
+<h4 id="如果不支持高版本语法-那么需要先降级处理-然后执行处理后的降级代码"><a href="#如果不支持高版本语法-那么需要先降级处理-然后执行处理后的降级代码" class="headerlink" title="如果不支持高版本语法,那么需要先降级处理.然后执行处理后的降级代码"></a>如果不支持高版本语法,那么需要先降级处理.然后执行处理后的降级代码</h4><h2 id="使用方式二"><a href="#使用方式二" class="headerlink" title="使用方式二"></a>使用方式二</h2><h3 id="1-整体导出函数"><a href="#1-整体导出函数" class="headerlink" title="1.整体导出函数"></a>1.整体导出函数</h3><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118145525798.png" alt="image-20241118145525798"></p>
+<h3 id="2-另一个js文件中导入并使用"><a href="#2-另一个js文件中导入并使用" class="headerlink" title="2.另一个js文件中导入并使用"></a>2.另一个js文件中导入并使用</h3><p><img src="/./../../TyporaImage/Front-EndAdvancement/image-20241118145556375.png" alt="image-20241118145556375"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+    <content><![CDATA[<h1 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>模板字符串（Template String）是 JavaScript ES6 引入的一种新的字符串表示方式，用反引号（&#96;）包裹，支持嵌入表达式和多行内容，增强了字符串的可读性和灵活性。</p>
+<h2 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h2><p>反引号：用来包裹模板字符串。<br>占位符：使用 ${} 插入变量或表达式的计算结果。<br>普通字符串内容：除了占位符，模板字符串还可以包含任何普通字符。</p>
+<h2 id="结构形式"><a href="#结构形式" class="headerlink" title="结构形式"></a>结构形式</h2><h3 id="1-单行模板字符串："><a href="#1-单行模板字符串：" class="headerlink" title="1.单行模板字符串："></a>1.单行模板字符串：</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">`这是一个单行模板字符串。`</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-多行模板字符串："><a href="#2-多行模板字符串：" class="headerlink" title="2.多行模板字符串："></a>2.多行模板字符串：</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">`这是</span></span><br><span class="line"><span class="string">一个</span></span><br><span class="line"><span class="string">多行模板字符串。`</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-含表达式的模板字符串："><a href="#3-含表达式的模板字符串：" class="headerlink" title="3.含表达式的模板字符串："></a>3.含表达式的模板字符串：</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">&quot;张三&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> str = <span class="string">`你好，<span class="subst">$&#123;name&#125;</span>`</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h4 id="1-声明模板字符串："><a href="#1-声明模板字符串：" class="headerlink" title="1.声明模板字符串："></a>1.声明模板字符串：</h4><p>用反引号包裹。</p>
+<h4 id="2-嵌入变量："><a href="#2-嵌入变量：" class="headerlink" title="2.嵌入变量："></a>2.嵌入变量：</h4><p>通过 ${变量名}。</p>
+<h4 id="3-嵌入表达式："><a href="#3-嵌入表达式：" class="headerlink" title="3.嵌入表达式："></a>3.嵌入表达式：</h4><p>通过 ${表达式}。</p>
+<h4 id="4-处理多行："><a href="#4-处理多行：" class="headerlink" title="4.处理多行："></a>4.处理多行：</h4><p>直接回车换行即可。</p>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">&quot;张三&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> age = <span class="number">25</span>;</span><br><span class="line"><span class="keyword">const</span> greeting = <span class="string">`你好，我是 <span class="subst">$&#123;name&#125;</span>，今年 <span class="subst">$&#123;age&#125;</span> 岁。`</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(greeting);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>箭头函数（Arrow Function）是 JavaScript ES6 引入的一种简洁的函数表达式书写方式，使用箭头符号 &#x3D;&gt; 来定义函数。箭头函数通过简化函数声明语法，使得函数的定义更加简洁，并且具有不同于普通函数的 this 绑定规则。</p>
+<h2 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h2><h3 id="1-箭头符号"><a href="#1-箭头符号" class="headerlink" title="1.箭头符号"></a>1.箭头符号</h3><p>使用 &#x3D;&gt; 来表示函数的定义。</p>
+<h3 id="2-函数参数"><a href="#2-函数参数" class="headerlink" title="2.函数参数"></a>2.函数参数</h3><p>函数的输入参数，括号中写出（对于单个参数可以省略括号）。</p>
+<h3 id="3-函数体"><a href="#3-函数体" class="headerlink" title="3.函数体"></a>3.函数体</h3><p>箭头后面跟着的函数体部分，若函数体只有一行表达式，可以省略 {} 和 return 关键字。</p>
+<h2 id="结构形式"><a href="#结构形式" class="headerlink" title="结构形式"></a>结构形式</h2><h3 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1.基本语法"></a>1.基本语法</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">sum</span> = (<span class="params">a, b</span>) =&gt; a + b;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-无参数函数"><a href="#2-无参数函数" class="headerlink" title="2.无参数函数"></a>2.无参数函数</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">greet</span> = (<span class="params"></span>) =&gt; <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello, World!&quot;</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-单个参数-如果只有一个参数，可以省略括号"><a href="#3-单个参数-如果只有一个参数，可以省略括号" class="headerlink" title="3.单个参数:如果只有一个参数，可以省略括号"></a>3.单个参数:如果只有一个参数，可以省略括号</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">square</span> = x =&gt; x * x;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-多行函数体-如果函数体有多行代码，必须使用-包裹，并且需要显式-return-语句返回值"><a href="#4-多行函数体-如果函数体有多行代码，必须使用-包裹，并且需要显式-return-语句返回值" class="headerlink" title="4.多行函数体:如果函数体有多行代码，必须使用 {} 包裹，并且需要显式 return 语句返回值"></a>4.多行函数体:如果函数体有多行代码，必须使用 <code>&#123;&#125;</code> 包裹，并且需要显式 <code>return</code> 语句返回值</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">multiply</span> = (<span class="params">a, b</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> result = a * b;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>为了简化函数定义，特别是在需要传递回调函数时，减少样板代码，提升代码可读性。同时，箭头函数通过词法绑定 this，避免了常见的 this 绑定错误问题，特别是在使用回调函数时。</p>
+<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p>当调用一个箭头函数时，this 会根据其定义位置的外部上下文来绑定，而不是根据函数调用的上下文。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/%E8%AF%AD%E6%B3%95%E7%B3%96/</url>
+    <content><![CDATA[<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>语法糖指的是某些特定的编程语法，它们通过对常规语法的简化、重构，使代码更易于编写、阅读和理解，但本质上并没有增加新的功能，所有的语法糖最终都可以转换为更加复杂或者繁琐的基础语法。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>通过简化或优化语言的语法，减少代码的冗长，使得程序员能够更加专注于解决实际问题，而不是被繁琐的语法细节所困扰。</p>
+<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p>语法糖本质上是在编译器或解释器中做的语法映射，它将简化的语法转换为更原始的形式进行执行。</p>
+<h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><p>“语法糖”这个术语的由来，是通过比喻的方式来形容某些编程语言中语法的简化形式。就像糖一样，它并不改变食物的基本成分或营养价值，只是使食物更加美味和容易接受。类似地，<strong>语法糖</strong>在编程中并没有增加新的功能，它只是对某些复杂的操作提供了更加简洁、易懂的表达方式。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>默认参数（Default Parameters）是 JavaScript ES6 中引入的功能，它允许在函数声明时为参数指定默认值。当调用函数时，如果没有传入相应的参数，则使用该默认值。</p>
+<h2 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h2><h3 id="1-函数参数："><a href="#1-函数参数：" class="headerlink" title="1.函数参数："></a>1.函数参数：</h3><p>在函数定义时使用 &#x3D; 给参数设置默认值。</p>
+<h3 id="2-默认值："><a href="#2-默认值：" class="headerlink" title="2.默认值："></a>2.默认值：</h3><p>如果调用时没有传入参数，参数将使用该默认值。</p>
+<h2 id="结构形式"><a href="#结构形式" class="headerlink" title="结构形式"></a>结构形式</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params">a = <span class="number">10</span></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">foo</span>(); <span class="comment">// 输出：10</span></span><br><span class="line"><span class="title function_">foo</span>(<span class="number">5</span>); <span class="comment">// 输出：5</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>默认参数的目的是简化函数的参数处理，避免为每个缺省的参数手动检查 undefined 或 null，使函数在调用时更加简洁、容错性更强。</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="1-在函数声明时使用-给参数设置默认值。"><a href="#1-在函数声明时使用-给参数设置默认值。" class="headerlink" title="1.在函数声明时使用 &#x3D; 给参数设置默认值。"></a>1.在函数声明时使用 &#x3D; 给参数设置默认值。</h3><h3 id="2-默认值会在参数未传入或传入-undefined-时生效。"><a href="#2-默认值会在参数未传入或传入-undefined-时生效。" class="headerlink" title="2.默认值会在参数未传入或传入 undefined 时生效。"></a>2.默认值会在参数未传入或传入 undefined 时生效。</h3><h3 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">greet</span>(<span class="params">name = <span class="string">&quot;游客&quot;</span></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`你好，<span class="subst">$&#123;name&#125;</span>!`</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">greet</span>(); <span class="comment">// 输出：你好，游客!</span></span><br><span class="line"><span class="title function_">greet</span>(<span class="string">&quot;小明&quot;</span>); <span class="comment">// 输出：你好，小明!</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/11/18/TyporaNotes/Typora_Front-EndAdvancement/let%E4%B8%8Econst%E7%9A%84%E8%AE%A4%E8%AF%86/</url>
+    <content><![CDATA[<h1 id="let和const的认识"><a href="#let和const的认识" class="headerlink" title="let和const的认识"></a>let和const的认识</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>let 和 const 是 ES6 中引入的变量声明方式，用于定义变量或常量。<br>let：声明一个可更改的变量。<br>const：声明一个不可重新赋值的常量，且声明时必须赋值。</p>
+<h2 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h2><p>1.变量名：表示变量或常量的标识符。<br>2.值：变量或常量所保存的数据，可以是任意类型（如字符串、数字、对象等）。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>避免 var 声明变量带来的作用域污染问题。<br>提供更清晰的变量声明机制，减少潜在的错误。</p>
+<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><h2 id="1-let-的特性"><a href="#1-let-的特性" class="headerlink" title="1.let 的特性"></a>1.let 的特性</h2><p>①块级作用域：声明的变量只在当前块内有效。<br>②不允许重复声明：同一作用域内，let 不能重复声明变量。<br>③暂时性死区（TDZ）：在声明前访问会导致错误（ReferenceError）。</p>
+<h2 id="2-const-的特性"><a href="#2-const-的特性" class="headerlink" title="2.const 的特性"></a>2.const 的特性</h2><p>①常量值不可修改：声明后不能通过重新赋值改变值。<br>②块级作用域：与 let 一样。<br>③引用类型不可变性：const 声明的引用类型（如对象、数组）本身的引用地址不可变，但内部数据可以更改。</p>
+]]></content>
+  </entry>
 </search>
